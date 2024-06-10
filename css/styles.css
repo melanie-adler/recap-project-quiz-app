@@ -71,7 +71,7 @@ button:hover {
 
 .answer {
   display: flex;
-  display: none;
+  /* display: none; */
   /* visibility: hidden; */
   justify-content: center;
   align-items: center;
@@ -107,4 +107,13 @@ footer {
   border-top: 1px solid black;
   z-index: 1;
   background-color: white;
+}
+
+.fa-bookmark.fa-solid.fa-nav {
+  position: inherit;
+}
+
+.fa-house,
+.fa-user {
+  font-size: 36px;
 }
