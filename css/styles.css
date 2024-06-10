@@ -117,3 +117,12 @@ footer {
 .fa-user {
   font-size: 36px;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
