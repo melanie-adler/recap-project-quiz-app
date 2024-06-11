@@ -83,12 +83,12 @@ li {
   padding: 12px;
 }
 
-.tags {
+.tag-container {
   display: flex;
   gap: 4px;
 }
 
-.tags > li {
+.tag {
   display: flex;
   justify-content: center;
   align-items: center;
