@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
   font-family: Crimson_Text;
+  color: rgb(30, 45, 8);
 }
 
 * {
@@ -55,6 +56,7 @@ header {
 h1 {
   font-size: 44px;
   font-family: Unica_One;
+  text-shadow: 0 0 20px greenyellow;
 }
 
 main {
@@ -107,6 +109,7 @@ li {
 
 .answer {
   justify-content: center;
+  text-align: center;
   align-items: center;
   padding-top: 12px;
 }
@@ -154,6 +157,17 @@ li {
   font-weight: bolder;
 }
 
+.new-question-fieldset > textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px greenyellow;
+}
+
+.character-count {
+  text-align: right;
+  padding-top: 2px;
+  color: rgb(30, 45, 8);
+}
+
 .submit-button {
   width: fit-content;
   font-family: Unica_One;
@@ -179,6 +193,7 @@ li {
   height: 120px;
   object-fit: cover;
   border-radius: 100px;
+  box-shadow: 0 0 20px rgb(30, 45, 8);
 }
 
 .intro {

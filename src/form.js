@@ -3,6 +3,24 @@ console.clear();
 const form = document.querySelector('[data-js="new-question-form"]');
 const submitButton = document.querySelector('[data-js="submit-button"]');
 
+const charactersLeft = document.querySelectorAll(
+  '[data-js="remaining-characters"]'
+);
+const textInput = document.querySelectorAll('[data-js="input-field"]');
+
+textInput.forEach((textarea, index) => {
+  textarea.addEventListener("input", (event) => {
+    characterCount(charactersLeft[index]);
+  });
+});
+
+function characterCount(charactersLeft) {
+  const charactersLeftValue = charactersLeft.getAttribute("value");
+  console.log(charactersLeftValue);
+  const lengthOfInput = event.target.value.length;
+  charactersLeft.textContent = charactersLeftValue - lengthOfInput;
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -35,6 +53,7 @@ form.addEventListener("submit", (event) => {
 
   newCard.classList.add("question-card");
   newBookmarkButton.classList.add("bookmark");
+  newBookmarkButton.setAttribute("aria-label", "Bookmark question");
   newBookmarkIcon.setAttribute("src", "/src/icons/bookmark-fill-white.svg");
   newBookmarkIcon.setAttribute("alt", "Bookmark button");
   newBookmarkIcon.setAttribute("data-js", "bookmark-button");
@@ -52,6 +71,7 @@ form.addEventListener("submit", (event) => {
   newTag.textContent = `#${data.tagField}`;
 
   event.target.reset();
+  event.target.elements.questionField.focus();
 
   newAnswerButton.addEventListener("click", () => {
     showAnswer();

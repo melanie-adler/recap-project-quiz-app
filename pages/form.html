@@ -18,25 +18,34 @@
             id="question-field"
             name="questionField"
             rows="4"
-            maxlength="150"
-            data-js="question-field"
+            maxlength="100"
+            data-js="input-field"
           ></textarea>
+          <p class="character-count">
+            <span data-js="remaining-characters" value="100">100</span> characters left
+          </p>
           <label for="answer-field">Your answer:</label>
           <textarea
             id="answer-field"
             name="answerField"
             rows="4"
-            maxlength="150"
-            data-js="answer-field"
+            maxlength="100"
+            data-js="input-field"
           ></textarea>
+          <p class="character-count">
+            <span data-js="remaining-characters" value="100">100</span> characters left
+          </p>
           <label for="tag-field">Tags:</label>
           <textarea
             id="tag-field"
             name="tagField"
             rows="2"
             maxlength="80"
-            data-js="tag-field"
+            data-js="input-field"
           ></textarea>
+          <p class="character-count">
+            <span data-js="remaining-characters" value="80">80</span> characters left
+          </p>
         </fieldset>
         <button type="submit" class="submit-button" data-js="submit-button">
           Submit
