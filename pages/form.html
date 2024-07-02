@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <script src="/src/form.js" defer></script>
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Quiz App</h1>
+    </header>
+    <main>
+      <form class="new-question-form" data-js="new-question-form">
+        <fieldset class="new-question-fieldset">
+          <label for="question-field">Your question:</label>
+          <textarea
+            id="question-field"
+            name="questionField"
+            rows="4"
+            maxlength="150"
+            data-js="question-field"
+          ></textarea>
+          <label for="answer-field">Your answer:</label>
+          <textarea
+            id="answer-field"
+            name="answerField"
+            rows="4"
+            maxlength="150"
+            data-js="answer-field"
+          ></textarea>
+          <label for="tag-field">Tags:</label>
+          <textarea
+            id="tag-field"
+            name="tagField"
+            rows="2"
+            maxlength="80"
+            data-js="tag-field"
+          ></textarea>
+        </fieldset>
+        <button type="submit" class="submit-button" data-js="submit-button">
+          Submit
+        </button>
+      </form>
+    </main>
+    <footer>
+      <nav>
+        <ul class="navigation">
+          <li id="home-page">
+            <a href="index.html" aria-label="Home page">
+              <img
+                src="/src/icons/house-door.svg"
+                alt="Home page icon"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="bookmarks.html" aria-label="Go to bookmarks page">
+              <img
+                src="/src/icons/bookmarks.svg"
+                alt="Bookmarks page icon"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="form.html" aria-label="Add new card page">
+              <img
+                src="/src/icons/bookmark-plus-fill.svg"
+                alt="Add question icon"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" aria-label="Go to profile page"></a>
+            <img
+              src="/src/icons/person.svg"
+              alt="Profile page icon"
+              aria-hidden="true"
+            />
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
