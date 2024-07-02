@@ -21,9 +21,9 @@ bookmark.addEventListener("click", () => {
 });
 
 function bookmarkQuestion() {
-  bookmarkIcon.src === "./src/icons/bookmark-fill-black.svg"
-    ? (bookmarkIcon.src = "./src/icons/bookmark-fill-white.svg")
-    : (bookmarkIcon.src = "./src/icons/bookmark-fill-black.svg");
+  bookmarkIcon.src === "/src/icons/bookmark-fill-black.svg"
+    ? (bookmarkIcon.src = "/src/icons/bookmark-fill-white.svg")
+    : (bookmarkIcon.src = "/src/icons/bookmark-fill-black.svg");
 }
 
 // apply to all buttons

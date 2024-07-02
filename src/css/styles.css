@@ -15,9 +15,6 @@ body {
 }
 
 img,
-picture,
-video,
-canvas,
 svg {
   display: block;
   max-width: 100%;
@@ -48,7 +45,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 10%; */
   border-bottom: 1px solid black;
   position: sticky;
   top: 0;
@@ -62,20 +58,19 @@ h1 {
 }
 
 main {
-  padding: 0 20px;
+  padding: 0 20px 60px 20px;
 }
 
 ul,
 li {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: auto;
 }
 
 .question-card {
   position: relative;
   background-color: greenyellow;
-  border: 1px solid greenyellow;
   border-radius: 4px;
   margin: 36px 0;
   padding: 16px;
@@ -89,7 +84,7 @@ li {
   font-size: 36px;
   position: absolute;
   right: 10px;
-  top: -8px;
+  top: -12px;
   background-color: transparent;
   border: none;
 }
@@ -141,6 +136,7 @@ li {
   background-color: grey;
   color: white;
   font-family: Unica_One;
+  margin: 0;
 }
 
 .new-question-form {
@@ -172,7 +168,16 @@ li {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 12px 12px 52px 12px;
+  margin: 40px 0;
+  font-size: 28px;
+  gap: 20px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 100px;
 }
 
 .intro {
@@ -210,7 +215,7 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: rgb(223, 223, 223);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -222,17 +227,17 @@ li {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: black;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: black;
+  background-color: grey;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px grey;
+  box-shadow: 0 0 1px black;
 }
 
 input:checked + .slider:before {
@@ -267,23 +272,13 @@ footer {
   z-index: 2;
 }
 
-.fa-bookmark.fa-regular.fa-nav {
-  position: inherit;
-}
-
-.fa-house,
-.fa-user,
-.fa-bookmark {
-  font-size: 36px;
-}
-
 a {
   text-decoration: none;
   color: black;
 }
 
 a:hover {
-  color: grey;
+  color: greenyellow;
 }
 
 /* #home-page {

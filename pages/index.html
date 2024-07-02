@@ -2,8 +2,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/styles.css" />
-    <script src="./src/index.js" defer></script>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <script src="/src/index.js" defer></script>
     <title>Quiz App</title>
   </head>
   <body>
@@ -20,7 +20,7 @@
               data-js="bookmark-button"
             >
               <img
-                src="./src/icons/bookmark-fill-white.svg"
+                src="/src/icons/bookmark-fill-white.svg"
                 alt="Bookmark button"
                 data-js="bookmark-icon"
               />
@@ -46,7 +46,7 @@
               data-js="bookmark-button"
             >
               <img
-                src="./src/icons/bookmark-fill-white.svg"
+                src="/src/icons/bookmark-fill-white.svg"
                 alt="Bookmark button"
               />
             </button>
@@ -70,7 +70,7 @@
               data-js="bookmark-button"
             >
               <img
-                src="./src/icons/bookmark-fill-white.svg"
+                src="/src/icons/bookmark-fill-white.svg"
                 alt="Bookmark button"
               />
             </button>
@@ -93,27 +93,36 @@
       <nav>
         <ul class="navigation">
           <li id="home-page">
-            <a href="index.html" aria-label="Home page">
+            <a href="/index.html" aria-label="Home page">
               <img
-                src="./src/icons/house-door-fill.svg"
+                src="/src/icons/house-door-fill.svg"
                 alt="Home page icon"
                 aria-hidden="true"
               />
             </a>
           </li>
           <li>
-            <a href="bookmarks.html" aria-label="Go to bookmarks page">
+            <a href="/pages/bookmarks.html" aria-label="Go to bookmarks page">
               <img
-                src="./src/icons/bookmarks.svg"
+                src="/src/icons/bookmarks.svg"
                 alt="Bookmarks page icon"
                 aria-hidden="true"
               />
             </a>
           </li>
           <li>
-            <a href="profile.html" aria-label="Go to profile page"></a>
+            <a href="/pages/form.html" aria-label="Add new card page">
+              <img
+                src="/src/icons/bookmark-plus.svg"
+                alt="Add question icon"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="/pages/profile.html" aria-label="Go to profile page">
             <img
-              src="./src/icons/person.svg"
+              src="/src/icons/person.svg"
               alt="Profile page icon"
               aria-hidden="true"
             />
