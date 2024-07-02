@@ -20,11 +20,11 @@ const bookmarkIcon = document.querySelectorAll('[data-js="bookmark-icon"]');
 
 bookmark.forEach((button, index) => {
   button.addEventListener("click", () => {
-    bookmarkQuestion(bookmarkIcon[index]);
+    deleteBookmark(bookmarkIcon[index]);
   });
 });
 
-function bookmarkQuestion(bookmarkIcon) {
+function deleteBookmark(bookmarkIcon) {
   const currentSrc = bookmarkIcon.src;
   if (currentSrc.includes("bookmark-fill-black.svg")) {
     bookmarkIcon.src = "/src/icons/bookmark-fill-white.svg";

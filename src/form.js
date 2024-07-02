@@ -2,7 +2,6 @@ console.clear();
 
 const form = document.querySelector('[data-js="new-question-form"]');
 const submitButton = document.querySelector('[data-js="submit-button"]');
-// console.log(form);
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -60,18 +59,19 @@ form.addEventListener("submit", (event) => {
 
   function showAnswer() {
     newAnswer.classList.toggle("show-answer");
-    newAnswerButton.textContent === "Hide Answer"
-      ? (newAnswerButton.textContent = "Show Answer")
-      : (newAnswerButton.textContent = "Hide Answer");
+    newAnswerButton.textContent =
+      newAnswerButton.textContent === "Hide Answer"
+        ? "Show Answer"
+        : "Hide Answer";
   }
 
-  newBookmarkButton.addEventListener("click", () => {
-    bookmarkQuestion();
-  });
+  // newBookmarkButton.addEventListener("click", () => {
+  //   bookmarkQuestion();
+  // });
 
-  function bookmarkQuestion() {
-    newBookmarkIcon.src === "/src/icons/bookmark-fill-black.svg"
-      ? (newBookmarkIcon.src = "/src/icons/bookmark-fill-white.svg")
-      : (newBookmarkIcon.src = "/src/icons/bookmark-fill-black.svg");
-  }
+  // function bookmarkQuestion() {
+  //   newBookmarkIcon.src === "/src/icons/bookmark-fill-black.svg"
+  //     ? (newBookmarkIcon.src = "/src/icons/bookmark-fill-white.svg")
+  //     : (newBookmarkIcon.src = "/src/icons/bookmark-fill-black.svg");
+  // }
 });

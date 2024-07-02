@@ -76,10 +76,6 @@ li {
   padding: 16px;
 }
 
-.button.bookmark {
-  background-color: transparent;
-}
-
 .bookmark {
   font-size: 36px;
   position: absolute;
@@ -153,6 +149,11 @@ li {
   padding: 0;
 }
 
+.new-question-fieldset > label {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 .submit-button {
   width: fit-content;
   font-family: Unica_One;
@@ -160,7 +161,8 @@ li {
   border: none;
   border-radius: 4px;
   padding: 4px;
-  margin-top: 36px;
+  margin: 28px auto 0 auto;
+  font-size: 20px;
 }
 
 .profile-name {
