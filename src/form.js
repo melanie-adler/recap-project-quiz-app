@@ -10,14 +10,13 @@ const textInput = document.querySelectorAll('[data-js="input-field"]');
 
 textInput.forEach((textarea, index) => {
   textarea.addEventListener("input", (event) => {
-    characterCount(charactersLeft[index]);
+    characterCount(event.target, charactersLeft[index]);
   });
 });
 
-function characterCount(charactersLeft) {
-  const charactersLeftValue = charactersLeft.getAttribute("value");
-  console.log(charactersLeftValue);
-  const lengthOfInput = event.target.value.length;
+function characterCount(textarea, charactersLeft) {
+  const charactersLeftValue = textarea.getAttribute("maxlength");
+  const lengthOfInput = textarea.value.length;
   charactersLeft.textContent = charactersLeftValue - lengthOfInput;
 }
 
@@ -85,13 +84,43 @@ form.addEventListener("submit", (event) => {
         : "Hide Answer";
   }
 
-  // newBookmarkButton.addEventListener("click", () => {
-  //   bookmarkQuestion();
-  // });
-
-  // function bookmarkQuestion() {
-  //   newBookmarkIcon.src === "/src/icons/bookmark-fill-black.svg"
-  //     ? (newBookmarkIcon.src = "/src/icons/bookmark-fill-white.svg")
-  //     : (newBookmarkIcon.src = "/src/icons/bookmark-fill-black.svg");
-  // }
+  textInput.forEach((textarea, index) => {
+    textarea.value = "";
+    const charactersLeftValue = textarea.getAttribute("maxlength");
+    charactersLeft[index].textContent = charactersLeftValue;
+  });
 });
+
+// const questionCardCreator = {
+//   get form() {
+//     return document.querySelector('[data-js="new-question-form"]');
+//   },
+//   get textareas() {
+//     return document.querySelectorAll("textarea");
+//   },
+//   count(el) {
+//     let max = el.getAttribute("maxlength");
+//     let contains = el.value.length;
+//     let output = el.nextElementSibling.querySelector(
+//       '[data-js="remaining-characters"]'
+//     );
+//     output.innerHTML = max - contains;
+//   },
+//   watch(el) {
+//     el.addEventListener("input", (e) => {
+//       this.count(e.target);
+//     });
+//   },
+//   setup() {
+//     for (const textarea of this.textareas) {
+//       this.count(textarea);
+//       this.watch(textarea);
+//     }
+//   },
+//   submit() {},
+//   init() {
+//     this.setup();
+//   },
+// };
+
+// questionCardCreator.init();
